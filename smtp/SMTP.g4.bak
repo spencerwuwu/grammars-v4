@@ -1,0 +1,46 @@
+// ANTLR4 Grammar for SMTP protocol (RFC 2821)
+grammar SMTP;
+
+// Entry point
+session         : command;
+
+// === SMTP Commands ===
+command         : ( helo | ehlo );
+//command         : ( helo | ehlo ) mailFrom rcptTo dataCmd quit;
+//                | rset
+//                | vrfy
+//                | noop
+
+helo            : 'HELO' SP domain CRLF;
+ehlo            : 'EHLO' SP domain CRLF;
+mailFrom        : 'MAIL FROM:' reversePath CRLF;
+rcptTo          : 'RCPT TO:' forwardPath CRLF;
+dataCmd         : 'DATA' CRLF dataBody '.' CRLF;
+rset            : 'RSET' CRLF;
+vrfy            : 'VRFY' SP path CRLF;
+noop            : 'NOOP' CRLF;
+quit            : 'QUIT' CRLF;
+
+// === Paths ===
+reversePath     : '<' path? '>';
+forwardPath     : '<' path '>';
+path            : mailbox;
+mailbox         : localPart '@' domain;
+
+// === Message Data ===
+dataBody        : (DATA_LINE CRLF)*;
+DATA_LINE       : ~'.'+;  // line must not start with single '.'
+
+// === Identifiers ===
+localPart       : WORD ('.' WORD)*;
+domain          : subDomain ('.' subDomain)*;
+subDomain       : LETTER (LETTER | DIGIT | '-')*;
+
+// === LEXER RULES ===
+CRLF            : '\r\n';
+SP              : ' ';
+WORD            : [a-zA-Z0-9!#$%&'*+/=?^_`{|}~-]+;
+LETTER          : [a-zA-Z];
+DIGIT           : [0-9];
+WS              : [ \t]+ -> skip;
+
