@@ -7,12 +7,16 @@ session         : command;
 // === SMTP Commands ===
 command         : ( helo | ehlo )
                  mailFrom
+                 rcptTo
+                 dataCmd
                  quit
                 ;
 
 helo            : 'HELO' SP domain CRLF;
 ehlo            : 'EHLO' SP domain CRLF;
 mailFrom        : 'MAIL FROM:' reversePath CRLF;
+rcptTo          : 'RCPT TO:' forwardPath CRLF;
+dataCmd         : 'DATA' CRLF dataBody '.' CRLF;
 
 quit            : 'QUIT' CRLF;
 
@@ -25,24 +29,50 @@ mailbox         : localPart '@' domain;
 
 
 // === Message Data ===
+dataBody        : (dataLine CRLF)*;
+dataLine       : ~'.'+;  // line must not start with single '.'
 
 
 // === Identifiers ===
 domain          : subDomain ('.' subDomain)*;
-subDomain       : LETTER (LETTER | DIGIT | '-')*;
-//localPart       : WORD ('.' WORD)*;
+subDomain       : ALPHA (ALPHA | DIGIT | '-')*;
+
+// === Local-part ===
+ localPart
+    : dotString
+    | quotedString
+    ;
+
+// dot-string = atom *("." atom)
+dotString
+    : atom ('.' atom)*
+    ;
+
+atom : (ALPHA | DIGIT | ATEXT_PUN )+;
+
+// quoted-string = DQUOTE *(qtext / quoted-pair) DQUOTE
+quotedString
+    : DQUOTE (qtext | quotedPair)* DQUOTE
+    ;
+
+qtext
+    : QTEXT
+    ;
+
+quotedPair
+    : '\\' .
+    ;
 
 
 // === LEXER RULES ===
 CRLF            : '\r\n';
 SP              : ' ';
-LETTER          : [a-zA-Z];
+ALPHA           : [a-zA-Z];
 DIGIT           : [0-9];
-CHAR            : LETTER
-                | DIGIT
-                | [!#$%&'*+/=?^_`{|}~-]
-                ;
-//WORD            : CHAR +;
+ATEXT_PUN       : [!#$%&'*+/=?^_`{|}~-];
 
-WS              : [ \t]+ -> skip;
+QTEXT       : ~["\\\r\n]; // exclude DQUOTE, backslash, CRLF
+DQUOTE      : '"';
+
+//WS              : [ \t]+ -> skip;
 
