@@ -7,7 +7,7 @@ session         : command;
 // === SMTP Commands ===
 command         : ( helo | ehlo )
                  mailFrom
-                 rcptTo
+                 rcptTo+
                  dataCmd
                  quit
                 ;
@@ -24,7 +24,11 @@ quit            : 'QUIT' CRLF;
 // === Paths ===
 reversePath     : '<' path? '>';
 forwardPath     : '<' path '>';
-path            : mailbox;
+path            : a_d_l? ':'? mailbox;
+// optional source route: @domain,@domain,...
+a_d_l           : atDomain (',' atDomain)* ;
+atDomain        : '@' domain ;
+
 mailbox         : localPart '@' domain;
 
 
@@ -57,6 +61,11 @@ quotedString
 
 qtext
     : QTEXT
+    | ALPHA | DIGIT | ATEXT_PUN
+    | '<' | '>' | '@' | '.'
+    | ':'
+    | CRLF
+    | SP
     ;
 
 quotedPair
@@ -71,8 +80,8 @@ ALPHA           : [a-zA-Z];
 DIGIT           : [0-9];
 ATEXT_PUN       : [!#$%&'*+/=?^_`{|}~-];
 
-QTEXT       : ~["\\\r\n]; // exclude DQUOTE, backslash, CRLF
 DQUOTE      : '"';
+QTEXT       : ~["\\\r\n];
 
 //WS              : [ \t]+ -> skip;
 
