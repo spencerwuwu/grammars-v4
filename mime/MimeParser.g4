@@ -17,9 +17,13 @@ headersOnly
     : header+ EOF
     ;
 
+blankLine
+    : (CRLF | LF)
+    ;
+
 // Headers followed by body
 headersBody
-    : header+ (CRLF | LF) body
+    : header+ blankLine body
     ;
 
 // Simple body without headers
@@ -29,7 +33,7 @@ simpleBody
 
 // Multipart structure
 multipart
-    : header* (CRLF | LF)
+    : header+ (CRLF | LF)
       preamble?
       part+
       BOUNDARY_END (CRLF | LF)?
@@ -38,7 +42,11 @@ multipart
 
 // Generic header structure
 header
-    : WORD COLON WSP* headerValue (CRLF | LF)
+    : headerName COLON WSP* headerValue (CRLF | LF)
+    ;
+
+headerName
+    : WORD (UNDERLINE WORD)*
     ;
 
 // Header value (fixed empty string issue)
@@ -99,5 +107,5 @@ bodyLine
     ;
 
 contentData
-    : (WSP | WORD | SPECIAL_TOKEN | DOUBLE_DASH)+
+    : (WSP | WORD | DIGITS | SPECIAL_TOKEN | DOUBLE_DASH | CONTENT_CHAR)+
     ;

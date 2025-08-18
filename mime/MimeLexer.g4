@@ -12,6 +12,7 @@ LANGLE              : '<';
 RANGLE              : '>';
 DQUOTE              : '"';
 DOUBLE_DASH         : '--';
+UNDERLINE           : '_';
 
 // Line terminators
 CRLF                : '\r\n';
