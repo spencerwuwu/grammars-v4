@@ -33,10 +33,11 @@ simpleBody
 
 // Multipart structure
 multipart
-    : header+ (CRLF | LF)
+    : header+ blankLine
       preamble?
       part+
-      BOUNDARY_END (CRLF | LF)?
+      //BOUNDARY_END (CRLF | LF)?
+      BOUNDARY_LINE (CRLF | LF)?
       epilogue?
     ;
 
@@ -49,22 +50,32 @@ headerName
     : WORD (UNDERLINE WORD)*
     ;
 
-// Header value (fixed empty string issue)
 headerValue
-    : headerValuePart+ (WSP headerValuePart*)*
+    : headerValueContent WSP* SEMICOLON? (WSP* parameter)*
     | /* empty */
     ;
 
+headerValueContent
+    : headerValuePart (WSP* headerValuePart)*
+    ;
+
 headerValuePart
-    : WORD
-    | SPECIAL_TOKEN
-    | QUOTED_STRING
-    | VERSION
-    | DIGITS
-    | mediaType
-    | parameter
-    | COMMENT
-    | SLASH | SEMICOLON | COMMA | EQUALS
+    : (WORD
+        | SPECIAL_TOKEN
+        | VERSION
+        | DIGITS
+        | mediaType
+        | comment
+        | SLASH
+        | COMMA
+        | PERIOD
+        | LANGLE
+        | RANGLE
+        | COLON
+        | EQUALS
+        | UNDERLINE
+       )+
+    | quotedString
     ;
 
 // Media type parsing
@@ -72,10 +83,56 @@ mediaType
     : WORD SLASH WORD
     ;
 
+
+// Quoted strings using lexer modes
+quotedString
+    : QUOTE_START quotedStringContent* (QUOTE_END)?
+    ;
+
+quotedStringContent
+    : QUOTED_CONTENT
+    | QUOTED_ESCAPE
+    ;
+
+// Comments (RFC 2822 style)
+// Comments (parser rule - only in headers)
+comment
+    : LPAREN commentContent* RPAREN
+    ;
+
+commentContent
+    : WORD
+    | SPECIAL_TOKEN
+    | DIGITS
+    | COMMENT_CHAR
+    | WSP
+    | comment          // nested comments
+    | escapedChar      // escape sequences
+    | COLON | SEMICOLON | SLASH | EQUALS | COMMA | LANGLE | RANGLE
+    ;
+
+// Escape sequences in comments
+escapedChar
+    : BACKSLASH (LPAREN | RPAREN | BACKSLASH | COMMENT_CHAR)
+    ;
+
 // Parameter parsing
 parameter
-    : WORD EQUALS (WORD | SPECIAL_TOKEN | QUOTED_STRING | DIGITS)
+    : WORD WSP* EQUALS WSP* parameterValue WSP* SEMICOLON?
     ;
+
+parameterValue
+    :headerValuePart
+    ;
+//    (WORD
+//        | SPECIAL_TOKEN
+//        | DIGITS
+//        | PERIOD
+//        | COMMA
+//        | SLASH
+//        )+
+//    | QUOTED_STRING
+//    ;
 
 // Multipart components
 preamble
@@ -83,10 +140,12 @@ preamble
     ;
 
 part
-    : BOUNDARY_START (CRLF | LF)
-      header*
-      (CRLF | LF)?
-      bodyContent?
+    //: BOUNDARY_START (CRLF | LF)
+    : BOUNDARY_LINE (CRLF | LF)
+      (header+ blankLine)?
+      ( bodyContent
+        | multipart
+      )?
     ;
 
 epilogue
@@ -103,9 +162,27 @@ bodyContent
     ;
 
 bodyLine
-    : contentData? (CRLF | LF)
+    : contentData+ (CRLF | LF | QUOTE_END)
+    | blankLine
     ;
 
 contentData
-    : (WSP | WORD | DIGITS | SPECIAL_TOKEN | DOUBLE_DASH | CONTENT_CHAR)+
+    : (WSP | FWS
+           |WORD | DIGITS
+           | SPECIAL_TOKEN | CONTENT_CHAR
+           | COLON
+           | SEMICOLON
+           | SLASH
+           | EQUALS
+           | COMMA
+           | LPAREN
+           | RPAREN
+           | LANGLE
+           | RANGLE
+           | PERIOD
+           | DOUBLE_DASH
+           | UNDERLINE
+           | BACKSLASH
+           | quotedString
+       )+
     ;
