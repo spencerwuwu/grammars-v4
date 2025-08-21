@@ -14,7 +14,7 @@ mimeMessage
 
 // Headers only (no body separator)
 headersOnly
-    : header+ EOF
+    : header+
     ;
 
 blankLine
