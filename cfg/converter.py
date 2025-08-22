@@ -174,7 +174,7 @@ class ANTLR4TreeConverter:
             # Optional: A? becomes A_opt -> A | ε
             new_rule = self._capitalize(f"{element}_opt")
             if new_rule not in self.rules:
-                self.rules[new_rule] = [[element, self.epsilon]]
+                self.rules[new_rule] = [[element], [self.epsilon]]
             return new_rule
         elif suffix == '*':
             # Zero or more: A* becomes A_star -> A A_star | ε
@@ -281,7 +281,7 @@ if __name__ == "__main__":
     
     tree = parser.grammarSpec()
     converter = ANTLR4TreeConverter(parser, start_rule)
-    result = converter.convert_parse_tree(tree, verbose=True)
+    result = converter.convert_parse_tree(tree, verbose=False)
     
     print("-" * 20)
     print("Converted grammar:")
