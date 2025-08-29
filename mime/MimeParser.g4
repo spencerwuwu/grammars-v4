@@ -23,12 +23,12 @@ blankLine
 
 // Headers followed by body
 headersBody
-    : header+ blankLine body
+    : header+ blankLine mimeBody
     ;
 
 // Simple body without headers
 simpleBody
-    : body
+    : mimeBody
     ;
 
 // Multipart structure
@@ -37,7 +37,8 @@ multipart
       preamble?
       part+
       //BOUNDARY_END (CRLF | LF)?
-      BOUNDARY_LINE (CRLF | LF)?
+      //BOUNDARY_LINE (CRLF | LF)?
+      boundaryLine (CRLF | LF)?
       epilogue?
     ;
 
@@ -141,7 +142,8 @@ preamble
 
 part
     //: BOUNDARY_START (CRLF | LF)
-    : BOUNDARY_LINE (CRLF | LF)
+    //: BOUNDARY_LINE (CRLF | LF)
+    : boundaryLine (CRLF | LF)
       (header+ blankLine)?
       ( bodyContent
         | multipart
@@ -152,8 +154,12 @@ epilogue
     : bodyContent
     ;
 
+boundaryLine
+    : BOUNDARY_LINE
+    ;
+
 // Body content
-body
+mimeBody
     : bodyContent
     ;
 

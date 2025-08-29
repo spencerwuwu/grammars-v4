@@ -37,7 +37,8 @@ def print_pda(pda):
 
 def get_grammar_mutation(cfg_file, seed_file, 
                          Lexer, Parser,
-                         skip_rulenames=[])-> Dict[str, List[str]]:
+                         skip_rulenames=[],
+                         no_mutate=[])-> Dict[str, List[str]]:
 
     # Load cfg
     cfg = get_cfg(cfg_file, verbose=False)
@@ -101,6 +102,7 @@ def get_grammar_mutation(cfg_file, seed_file,
     cyk_table = cfg.get_cyk_table(tokens_input)
     input_parts = dict()
 
+    #print(rule_indices.keys())
     skip_regions = []
     for key, v in rule_indices.items():
         if _check_skip(key):
@@ -118,7 +120,7 @@ def get_grammar_mutation(cfg_file, seed_file,
             if _in_regions(start, end, skip_regions):
                 continue
 
-            value = repr("".join(labels_input[start:end+1]))
+            value = "".join(labels_input[start:end+1])
 
             if rulename == "S" or _check_skip(rulename):
                 continue
@@ -130,17 +132,18 @@ def get_grammar_mutation(cfg_file, seed_file,
             #print(rulename)
         #if has_fit:
         #    print("\t", repr("".join(labels_input[k[0]:k[1]+1])))
-    #for rulename, values in input_parts.items():
-    #    print(rulename)
-    #    for v in values:
-    #        print("\t", v)
-    #print(cfg.contains(s))
-    #print(cfg.get_cnf_parse_tree(s))
+    for rulename, values in input_parts.items():
+        print("+++++++++++++++++")
+        print(rulename)
+        for v in values:
+            print("\t", v)
 
     mutation_sets = {}
     cnts = 0
     for rulename, values in input_parts.items():
-        if "body" in rulename.lower():
+        if _check_skip(rulename):
+            continue
+        if rulename in no_mutate:
             continue
         mutation_sets[rulename] = [] 
         for start, end in rule_indices.get(rulename, set()):
@@ -156,12 +159,12 @@ def get_grammar_mutation(cfg_file, seed_file,
 
     print(f"Total mutations: {cnts}")
     
-    for rulename, muts in mutation_sets.items():
-        print("++", rulename)
-        for m in muts:
-            print(repr(m))
-            print("------")
-        print("+++++++++++++++++++++++++")
+    #for rulename, muts in mutation_sets.items():
+    #    print("++", rulename)
+    #    for m in muts:
+    #        print(m)
+    #        print("------")
+    #    print("+++++++++++++++++++++++++")
 
     return mutation_sets
 
@@ -171,8 +174,11 @@ if __name__ == '__main__':
     skip_rulenames = [
             "#CNF", "ANTLR_new",
             "_opt", "_star", "_plus",
-            "BodyContent", "BodyLine"
+            "BodyContent", "BodyLine",
+            "mimeBody",
+            "contentData"
             ]
-    get_grammar_mutation("cfg.txt", seed_file, MimeLexer, MimeParser, skip_rulenames)
+    no_mutate = ["commentcontent", "quotedstringcontent", "part"]
+    get_grammar_mutation("cfg.txt", seed_file, MimeLexer, MimeParser, skip_rulenames, no_mutate)
 
 

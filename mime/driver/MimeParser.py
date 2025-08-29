@@ -10,52 +10,52 @@ else:
 
 def serializedATN():
     return [
-        4,1,31,307,2,0,7,0,2,1,7,1,2,2,7,2,2,3,7,3,2,4,7,4,2,5,7,5,2,6,7,
+        4,1,31,309,2,0,7,0,2,1,7,1,2,2,7,2,2,3,7,3,2,4,7,4,2,5,7,5,2,6,7,
         6,2,7,7,7,2,8,7,8,2,9,7,9,2,10,7,10,2,11,7,11,2,12,7,12,2,13,7,13,
         2,14,7,14,2,15,7,15,2,16,7,16,2,17,7,17,2,18,7,18,2,19,7,19,2,20,
-        7,20,2,21,7,21,2,22,7,22,2,23,7,23,2,24,7,24,2,25,7,25,1,0,1,0,1,
-        0,1,0,3,0,57,8,0,1,1,4,1,60,8,1,11,1,12,1,61,1,1,1,1,1,2,1,2,1,3,
-        4,3,69,8,3,11,3,12,3,70,1,3,1,3,1,3,1,4,1,4,1,5,4,5,79,8,5,11,5,
-        12,5,80,1,5,1,5,3,5,85,8,5,1,5,4,5,88,8,5,11,5,12,5,89,1,5,1,5,3,
-        5,94,8,5,1,5,3,5,97,8,5,1,6,1,6,1,6,5,6,102,8,6,10,6,12,6,105,9,
-        6,1,6,1,6,1,6,1,7,1,7,1,7,5,7,113,8,7,10,7,12,7,116,9,7,1,8,1,8,
-        5,8,120,8,8,10,8,12,8,123,9,8,1,8,3,8,126,8,8,1,8,5,8,129,8,8,10,
-        8,12,8,132,9,8,1,8,5,8,135,8,8,10,8,12,8,138,9,8,1,8,3,8,141,8,8,
-        1,9,1,9,5,9,145,8,9,10,9,12,9,148,9,9,1,9,5,9,151,8,9,10,9,12,9,
-        154,9,9,1,10,1,10,1,10,1,10,1,10,1,10,1,10,1,10,1,10,1,10,1,10,1,
-        10,1,10,1,10,4,10,170,8,10,11,10,12,10,171,1,10,3,10,175,8,10,1,
-        11,1,11,1,11,1,11,1,12,1,12,5,12,183,8,12,10,12,12,12,186,9,12,1,
-        12,3,12,189,8,12,1,13,1,13,1,14,1,14,5,14,195,8,14,10,14,12,14,198,
-        9,14,1,14,1,14,1,15,1,15,1,15,1,15,1,15,1,15,1,15,1,15,1,15,1,15,
-        1,15,1,15,1,15,1,15,3,15,216,8,15,1,16,1,16,1,16,1,17,1,17,5,17,
-        223,8,17,10,17,12,17,226,9,17,1,17,1,17,5,17,230,8,17,10,17,12,17,
-        233,9,17,1,17,1,17,5,17,237,8,17,10,17,12,17,240,9,17,1,17,3,17,
-        243,8,17,1,18,1,18,1,19,1,19,1,20,1,20,1,20,4,20,252,8,20,11,20,
-        12,20,253,1,20,1,20,3,20,258,8,20,1,20,1,20,3,20,262,8,20,1,21,1,
-        21,1,22,1,22,1,23,4,23,269,8,23,11,23,12,23,270,1,24,4,24,274,8,
-        24,11,24,12,24,275,1,24,1,24,1,24,3,24,281,8,24,1,25,1,25,1,25,1,
-        25,1,25,1,25,1,25,1,25,1,25,1,25,1,25,1,25,1,25,1,25,1,25,1,25,1,
-        25,1,25,1,25,1,25,4,25,303,8,25,11,25,12,25,304,1,25,0,0,26,0,2,
-        4,6,8,10,12,14,16,18,20,22,24,26,28,30,32,34,36,38,40,42,44,46,48,
-        50,0,4,1,0,14,15,1,0,30,31,3,0,7,8,13,13,25,25,2,0,14,15,29,29,361,
-        0,56,1,0,0,0,2,59,1,0,0,0,4,65,1,0,0,0,6,68,1,0,0,0,8,75,1,0,0,0,
-        10,78,1,0,0,0,12,98,1,0,0,0,14,109,1,0,0,0,16,140,1,0,0,0,18,142,
-        1,0,0,0,20,174,1,0,0,0,22,176,1,0,0,0,24,180,1,0,0,0,26,190,1,0,
-        0,0,28,192,1,0,0,0,30,215,1,0,0,0,32,217,1,0,0,0,34,220,1,0,0,0,
-        36,244,1,0,0,0,38,246,1,0,0,0,40,248,1,0,0,0,42,263,1,0,0,0,44,265,
-        1,0,0,0,46,268,1,0,0,0,48,280,1,0,0,0,50,302,1,0,0,0,52,57,3,8,4,
-        0,53,57,3,2,1,0,54,57,3,6,3,0,55,57,3,10,5,0,56,52,1,0,0,0,56,53,
-        1,0,0,0,56,54,1,0,0,0,56,55,1,0,0,0,57,1,1,0,0,0,58,60,3,12,6,0,
-        59,58,1,0,0,0,60,61,1,0,0,0,61,59,1,0,0,0,61,62,1,0,0,0,62,63,1,
-        0,0,0,63,64,5,0,0,1,64,3,1,0,0,0,65,66,7,0,0,0,66,5,1,0,0,0,67,69,
-        3,12,6,0,68,67,1,0,0,0,69,70,1,0,0,0,70,68,1,0,0,0,70,71,1,0,0,0,
-        71,72,1,0,0,0,72,73,3,4,2,0,73,74,3,44,22,0,74,7,1,0,0,0,75,76,3,
-        44,22,0,76,9,1,0,0,0,77,79,3,12,6,0,78,77,1,0,0,0,79,80,1,0,0,0,
-        80,78,1,0,0,0,80,81,1,0,0,0,81,82,1,0,0,0,82,84,3,4,2,0,83,85,3,
-        38,19,0,84,83,1,0,0,0,84,85,1,0,0,0,85,87,1,0,0,0,86,88,3,40,20,
+        7,20,2,21,7,21,2,22,7,22,2,23,7,23,2,24,7,24,2,25,7,25,2,26,7,26,
+        1,0,1,0,1,0,1,0,3,0,59,8,0,1,1,4,1,62,8,1,11,1,12,1,63,1,2,1,2,1,
+        3,4,3,69,8,3,11,3,12,3,70,1,3,1,3,1,3,1,4,1,4,1,5,4,5,79,8,5,11,
+        5,12,5,80,1,5,1,5,3,5,85,8,5,1,5,4,5,88,8,5,11,5,12,5,89,1,5,1,5,
+        3,5,94,8,5,1,5,3,5,97,8,5,1,6,1,6,1,6,5,6,102,8,6,10,6,12,6,105,
+        9,6,1,6,1,6,1,6,1,7,1,7,1,7,5,7,113,8,7,10,7,12,7,116,9,7,1,8,1,
+        8,5,8,120,8,8,10,8,12,8,123,9,8,1,8,3,8,126,8,8,1,8,5,8,129,8,8,
+        10,8,12,8,132,9,8,1,8,5,8,135,8,8,10,8,12,8,138,9,8,1,8,3,8,141,
+        8,8,1,9,1,9,5,9,145,8,9,10,9,12,9,148,9,9,1,9,5,9,151,8,9,10,9,12,
+        9,154,9,9,1,10,1,10,1,10,1,10,1,10,1,10,1,10,1,10,1,10,1,10,1,10,
+        1,10,1,10,1,10,4,10,170,8,10,11,10,12,10,171,1,10,3,10,175,8,10,
+        1,11,1,11,1,11,1,11,1,12,1,12,5,12,183,8,12,10,12,12,12,186,9,12,
+        1,12,3,12,189,8,12,1,13,1,13,1,14,1,14,5,14,195,8,14,10,14,12,14,
+        198,9,14,1,14,1,14,1,15,1,15,1,15,1,15,1,15,1,15,1,15,1,15,1,15,
+        1,15,1,15,1,15,1,15,1,15,3,15,216,8,15,1,16,1,16,1,16,1,17,1,17,
+        5,17,223,8,17,10,17,12,17,226,9,17,1,17,1,17,5,17,230,8,17,10,17,
+        12,17,233,9,17,1,17,1,17,5,17,237,8,17,10,17,12,17,240,9,17,1,17,
+        3,17,243,8,17,1,18,1,18,1,19,1,19,1,20,1,20,1,20,4,20,252,8,20,11,
+        20,12,20,253,1,20,1,20,3,20,258,8,20,1,20,1,20,3,20,262,8,20,1,21,
+        1,21,1,22,1,22,1,23,1,23,1,24,4,24,271,8,24,11,24,12,24,272,1,25,
+        4,25,276,8,25,11,25,12,25,277,1,25,1,25,1,25,3,25,283,8,25,1,26,
+        1,26,1,26,1,26,1,26,1,26,1,26,1,26,1,26,1,26,1,26,1,26,1,26,1,26,
+        1,26,1,26,1,26,1,26,1,26,1,26,4,26,305,8,26,11,26,12,26,306,1,26,
+        0,0,27,0,2,4,6,8,10,12,14,16,18,20,22,24,26,28,30,32,34,36,38,40,
+        42,44,46,48,50,52,0,4,1,0,14,15,1,0,30,31,3,0,7,8,13,13,25,25,2,
+        0,14,15,29,29,362,0,58,1,0,0,0,2,61,1,0,0,0,4,65,1,0,0,0,6,68,1,
+        0,0,0,8,75,1,0,0,0,10,78,1,0,0,0,12,98,1,0,0,0,14,109,1,0,0,0,16,
+        140,1,0,0,0,18,142,1,0,0,0,20,174,1,0,0,0,22,176,1,0,0,0,24,180,
+        1,0,0,0,26,190,1,0,0,0,28,192,1,0,0,0,30,215,1,0,0,0,32,217,1,0,
+        0,0,34,220,1,0,0,0,36,244,1,0,0,0,38,246,1,0,0,0,40,248,1,0,0,0,
+        42,263,1,0,0,0,44,265,1,0,0,0,46,267,1,0,0,0,48,270,1,0,0,0,50,282,
+        1,0,0,0,52,304,1,0,0,0,54,59,3,8,4,0,55,59,3,2,1,0,56,59,3,6,3,0,
+        57,59,3,10,5,0,58,54,1,0,0,0,58,55,1,0,0,0,58,56,1,0,0,0,58,57,1,
+        0,0,0,59,1,1,0,0,0,60,62,3,12,6,0,61,60,1,0,0,0,62,63,1,0,0,0,63,
+        61,1,0,0,0,63,64,1,0,0,0,64,3,1,0,0,0,65,66,7,0,0,0,66,5,1,0,0,0,
+        67,69,3,12,6,0,68,67,1,0,0,0,69,70,1,0,0,0,70,68,1,0,0,0,70,71,1,
+        0,0,0,71,72,1,0,0,0,72,73,3,4,2,0,73,74,3,46,23,0,74,7,1,0,0,0,75,
+        76,3,46,23,0,76,9,1,0,0,0,77,79,3,12,6,0,78,77,1,0,0,0,79,80,1,0,
+        0,0,80,78,1,0,0,0,80,81,1,0,0,0,81,82,1,0,0,0,82,84,3,4,2,0,83,85,
+        3,38,19,0,84,83,1,0,0,0,84,85,1,0,0,0,85,87,1,0,0,0,86,88,3,40,20,
         0,87,86,1,0,0,0,88,89,1,0,0,0,89,87,1,0,0,0,89,90,1,0,0,0,90,91,
-        1,0,0,0,91,93,5,18,0,0,92,94,7,0,0,0,93,92,1,0,0,0,93,94,1,0,0,0,
-        94,96,1,0,0,0,95,97,3,42,21,0,96,95,1,0,0,0,96,97,1,0,0,0,97,11,
+        1,0,0,0,91,93,3,44,22,0,92,94,7,0,0,0,93,92,1,0,0,0,93,94,1,0,0,
+        0,94,96,1,0,0,0,95,97,3,42,21,0,96,95,1,0,0,0,96,97,1,0,0,0,97,11,
         1,0,0,0,98,99,3,14,7,0,99,103,5,1,0,0,100,102,5,16,0,0,101,100,1,
         0,0,0,102,105,1,0,0,0,103,101,1,0,0,0,103,104,1,0,0,0,104,106,1,
         0,0,0,105,103,1,0,0,0,106,107,3,16,8,0,107,108,7,0,0,0,108,13,1,
@@ -104,31 +104,31 @@ def serializedATN():
         237,5,16,0,0,236,235,1,0,0,0,237,240,1,0,0,0,238,236,1,0,0,0,238,
         239,1,0,0,0,239,242,1,0,0,0,240,238,1,0,0,0,241,243,5,2,0,0,242,
         241,1,0,0,0,242,243,1,0,0,0,243,35,1,0,0,0,244,245,3,20,10,0,245,
-        37,1,0,0,0,246,247,3,46,23,0,247,39,1,0,0,0,248,249,5,18,0,0,249,
+        37,1,0,0,0,246,247,3,48,24,0,247,39,1,0,0,0,248,249,3,44,22,0,249,
         257,7,0,0,0,250,252,3,12,6,0,251,250,1,0,0,0,252,253,1,0,0,0,253,
         251,1,0,0,0,253,254,1,0,0,0,254,255,1,0,0,0,255,256,3,4,2,0,256,
         258,1,0,0,0,257,251,1,0,0,0,257,258,1,0,0,0,258,261,1,0,0,0,259,
-        262,3,46,23,0,260,262,3,10,5,0,261,259,1,0,0,0,261,260,1,0,0,0,261,
-        262,1,0,0,0,262,41,1,0,0,0,263,264,3,46,23,0,264,43,1,0,0,0,265,
-        266,3,46,23,0,266,45,1,0,0,0,267,269,3,48,24,0,268,267,1,0,0,0,269,
-        270,1,0,0,0,270,268,1,0,0,0,270,271,1,0,0,0,271,47,1,0,0,0,272,274,
-        3,50,25,0,273,272,1,0,0,0,274,275,1,0,0,0,275,273,1,0,0,0,275,276,
-        1,0,0,0,276,277,1,0,0,0,277,278,7,3,0,0,278,281,1,0,0,0,279,281,
-        3,4,2,0,280,273,1,0,0,0,280,279,1,0,0,0,281,49,1,0,0,0,282,303,5,
-        16,0,0,283,303,5,17,0,0,284,303,5,22,0,0,285,303,5,20,0,0,286,303,
-        5,23,0,0,287,303,5,24,0,0,288,303,5,1,0,0,289,303,5,2,0,0,290,303,
-        5,3,0,0,291,303,5,4,0,0,292,303,5,5,0,0,293,303,5,7,0,0,294,303,
-        5,8,0,0,295,303,5,9,0,0,296,303,5,10,0,0,297,303,5,6,0,0,298,303,
-        5,11,0,0,299,303,5,12,0,0,300,303,5,13,0,0,301,303,3,24,12,0,302,
-        282,1,0,0,0,302,283,1,0,0,0,302,284,1,0,0,0,302,285,1,0,0,0,302,
-        286,1,0,0,0,302,287,1,0,0,0,302,288,1,0,0,0,302,289,1,0,0,0,302,
-        290,1,0,0,0,302,291,1,0,0,0,302,292,1,0,0,0,302,293,1,0,0,0,302,
-        294,1,0,0,0,302,295,1,0,0,0,302,296,1,0,0,0,302,297,1,0,0,0,302,
-        298,1,0,0,0,302,299,1,0,0,0,302,300,1,0,0,0,302,301,1,0,0,0,303,
-        304,1,0,0,0,304,302,1,0,0,0,304,305,1,0,0,0,305,51,1,0,0,0,36,56,
-        61,70,80,84,89,93,96,103,114,121,125,130,136,140,146,152,169,171,
-        174,184,188,196,215,224,231,238,242,253,257,261,270,275,280,302,
-        304
+        262,3,48,24,0,260,262,3,10,5,0,261,259,1,0,0,0,261,260,1,0,0,0,261,
+        262,1,0,0,0,262,41,1,0,0,0,263,264,3,48,24,0,264,43,1,0,0,0,265,
+        266,5,18,0,0,266,45,1,0,0,0,267,268,3,48,24,0,268,47,1,0,0,0,269,
+        271,3,50,25,0,270,269,1,0,0,0,271,272,1,0,0,0,272,270,1,0,0,0,272,
+        273,1,0,0,0,273,49,1,0,0,0,274,276,3,52,26,0,275,274,1,0,0,0,276,
+        277,1,0,0,0,277,275,1,0,0,0,277,278,1,0,0,0,278,279,1,0,0,0,279,
+        280,7,3,0,0,280,283,1,0,0,0,281,283,3,4,2,0,282,275,1,0,0,0,282,
+        281,1,0,0,0,283,51,1,0,0,0,284,305,5,16,0,0,285,305,5,17,0,0,286,
+        305,5,22,0,0,287,305,5,20,0,0,288,305,5,23,0,0,289,305,5,24,0,0,
+        290,305,5,1,0,0,291,305,5,2,0,0,292,305,5,3,0,0,293,305,5,4,0,0,
+        294,305,5,5,0,0,295,305,5,7,0,0,296,305,5,8,0,0,297,305,5,9,0,0,
+        298,305,5,10,0,0,299,305,5,6,0,0,300,305,5,11,0,0,301,305,5,12,0,
+        0,302,305,5,13,0,0,303,305,3,24,12,0,304,284,1,0,0,0,304,285,1,0,
+        0,0,304,286,1,0,0,0,304,287,1,0,0,0,304,288,1,0,0,0,304,289,1,0,
+        0,0,304,290,1,0,0,0,304,291,1,0,0,0,304,292,1,0,0,0,304,293,1,0,
+        0,0,304,294,1,0,0,0,304,295,1,0,0,0,304,296,1,0,0,0,304,297,1,0,
+        0,0,304,298,1,0,0,0,304,299,1,0,0,0,304,300,1,0,0,0,304,301,1,0,
+        0,0,304,302,1,0,0,0,304,303,1,0,0,0,305,306,1,0,0,0,306,304,1,0,
+        0,0,306,307,1,0,0,0,307,53,1,0,0,0,36,58,63,70,80,84,89,93,96,103,
+        114,121,125,130,136,140,146,152,169,171,174,184,188,196,215,224,
+        231,238,242,253,257,261,272,277,282,304,306
     ]
 
 class MimeParser ( Parser ):
@@ -176,18 +176,19 @@ class MimeParser ( Parser ):
     RULE_preamble = 19
     RULE_part = 20
     RULE_epilogue = 21
-    RULE_body = 22
-    RULE_bodyContent = 23
-    RULE_bodyLine = 24
-    RULE_contentData = 25
+    RULE_boundaryLine = 22
+    RULE_body = 23
+    RULE_bodyContent = 24
+    RULE_bodyLine = 25
+    RULE_contentData = 26
 
     ruleNames =  [ "mimeMessage", "headersOnly", "blankLine", "headersBody", 
                    "simpleBody", "multipart", "header", "headerName", "headerValue", 
                    "headerValueContent", "headerValuePart", "mediaType", 
                    "quotedString", "quotedStringContent", "comment", "commentContent", 
                    "escapedChar", "parameter", "parameterValue", "preamble", 
-                   "part", "epilogue", "body", "bodyContent", "bodyLine", 
-                   "contentData" ]
+                   "part", "epilogue", "boundaryLine", "body", "bodyContent", 
+                   "bodyLine", "contentData" ]
 
     EOF = Token.EOF
     COLON=1
@@ -273,30 +274,30 @@ class MimeParser ( Parser ):
         localctx = MimeParser.MimeMessageContext(self, self._ctx, self.state)
         self.enterRule(localctx, 0, self.RULE_mimeMessage)
         try:
-            self.state = 56
+            self.state = 58
             self._errHandler.sync(self)
             la_ = self._interp.adaptivePredict(self._input,0,self._ctx)
             if la_ == 1:
                 self.enterOuterAlt(localctx, 1)
-                self.state = 52
+                self.state = 54
                 self.simpleBody()
                 pass
 
             elif la_ == 2:
                 self.enterOuterAlt(localctx, 2)
-                self.state = 53
+                self.state = 55
                 self.headersOnly()
                 pass
 
             elif la_ == 3:
                 self.enterOuterAlt(localctx, 3)
-                self.state = 54
+                self.state = 56
                 self.headersBody()
                 pass
 
             elif la_ == 4:
                 self.enterOuterAlt(localctx, 4)
-                self.state = 55
+                self.state = 57
                 self.multipart()
                 pass
 
@@ -316,9 +317,6 @@ class MimeParser ( Parser ):
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
             self.parser = parser
-
-        def EOF(self):
-            return self.getToken(MimeParser.EOF, 0)
 
         def header(self, i:int=None):
             if i is None:
@@ -348,20 +346,18 @@ class MimeParser ( Parser ):
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 59 
+            self.state = 61 
             self._errHandler.sync(self)
             _la = self._input.LA(1)
             while True:
-                self.state = 58
+                self.state = 60
                 self.header()
-                self.state = 61 
+                self.state = 63 
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
                 if not (_la==22):
                     break
 
-            self.state = 63
-            self.match(MimeParser.EOF)
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
@@ -542,8 +538,9 @@ class MimeParser ( Parser ):
             return self.getTypedRuleContext(MimeParser.BlankLineContext,0)
 
 
-        def BOUNDARY_LINE(self):
-            return self.getToken(MimeParser.BOUNDARY_LINE, 0)
+        def boundaryLine(self):
+            return self.getTypedRuleContext(MimeParser.BoundaryLineContext,0)
+
 
         def header(self, i:int=None):
             if i is None:
@@ -631,7 +628,7 @@ class MimeParser ( Parser ):
                 _alt = self._interp.adaptivePredict(self._input,5,self._ctx)
 
             self.state = 91
-            self.match(MimeParser.BOUNDARY_LINE)
+            self.boundaryLine()
             self.state = 93
             self._errHandler.sync(self)
             la_ = self._interp.adaptivePredict(self._input,6,self._ctx)
@@ -1859,8 +1856,9 @@ class MimeParser ( Parser ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
-        def BOUNDARY_LINE(self):
-            return self.getToken(MimeParser.BOUNDARY_LINE, 0)
+        def boundaryLine(self):
+            return self.getTypedRuleContext(MimeParser.BoundaryLineContext,0)
+
 
         def CRLF(self):
             return self.getToken(MimeParser.CRLF, 0)
@@ -1909,7 +1907,7 @@ class MimeParser ( Parser ):
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 248
-            self.match(MimeParser.BOUNDARY_LINE)
+            self.boundaryLine()
             self.state = 249
             _la = self._input.LA(1)
             if not(_la==14 or _la==15):
@@ -2000,6 +1998,47 @@ class MimeParser ( Parser ):
         return localctx
 
 
+    class BoundaryLineContext(ParserRuleContext):
+        __slots__ = 'parser'
+
+        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+            super().__init__(parent, invokingState)
+            self.parser = parser
+
+        def BOUNDARY_LINE(self):
+            return self.getToken(MimeParser.BOUNDARY_LINE, 0)
+
+        def getRuleIndex(self):
+            return MimeParser.RULE_boundaryLine
+
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterBoundaryLine" ):
+                listener.enterBoundaryLine(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitBoundaryLine" ):
+                listener.exitBoundaryLine(self)
+
+
+
+
+    def boundaryLine(self):
+
+        localctx = MimeParser.BoundaryLineContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 44, self.RULE_boundaryLine)
+        try:
+            self.enterOuterAlt(localctx, 1)
+            self.state = 265
+            self.match(MimeParser.BOUNDARY_LINE)
+        except RecognitionException as re:
+            localctx.exception = re
+            self._errHandler.reportError(self, re)
+            self._errHandler.recover(self, re)
+        finally:
+            self.exitRule()
+        return localctx
+
+
     class BodyContext(ParserRuleContext):
         __slots__ = 'parser'
 
@@ -2028,10 +2067,10 @@ class MimeParser ( Parser ):
     def body(self):
 
         localctx = MimeParser.BodyContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 44, self.RULE_body)
+        self.enterRule(localctx, 46, self.RULE_body)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 265
+            self.state = 267
             self.bodyContent()
         except RecognitionException as re:
             localctx.exception = re
@@ -2073,17 +2112,17 @@ class MimeParser ( Parser ):
     def bodyContent(self):
 
         localctx = MimeParser.BodyContentContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 46, self.RULE_bodyContent)
+        self.enterRule(localctx, 48, self.RULE_bodyContent)
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 268 
+            self.state = 270 
             self._errHandler.sync(self)
             _la = self._input.LA(1)
             while True:
-                self.state = 267
+                self.state = 269
                 self.bodyLine()
-                self.state = 270 
+                self.state = 272 
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
                 if not ((((_la) & ~0x3f) == 0 and ((1 << _la) & 32767998) != 0)):
@@ -2142,27 +2181,27 @@ class MimeParser ( Parser ):
     def bodyLine(self):
 
         localctx = MimeParser.BodyLineContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 48, self.RULE_bodyLine)
+        self.enterRule(localctx, 50, self.RULE_bodyLine)
         self._la = 0 # Token type
         try:
-            self.state = 280
+            self.state = 282
             self._errHandler.sync(self)
             token = self._input.LA(1)
             if token in [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 16, 17, 20, 21, 22, 23, 24]:
                 self.enterOuterAlt(localctx, 1)
-                self.state = 273 
+                self.state = 275 
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
                 while True:
-                    self.state = 272
+                    self.state = 274
                     self.contentData()
-                    self.state = 275 
+                    self.state = 277 
                     self._errHandler.sync(self)
                     _la = self._input.LA(1)
                     if not ((((_la) & ~0x3f) == 0 and ((1 << _la) & 32718846) != 0)):
                         break
 
-                self.state = 277
+                self.state = 279
                 _la = self._input.LA(1)
                 if not((((_la) & ~0x3f) == 0 and ((1 << _la) & 536920064) != 0)):
                     self._errHandler.recoverInline(self)
@@ -2172,7 +2211,7 @@ class MimeParser ( Parser ):
                 pass
             elif token in [14, 15]:
                 self.enterOuterAlt(localctx, 2)
-                self.state = 279
+                self.state = 281
                 self.blankLine()
                 pass
             else:
@@ -2332,95 +2371,95 @@ class MimeParser ( Parser ):
     def contentData(self):
 
         localctx = MimeParser.ContentDataContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 50, self.RULE_contentData)
+        self.enterRule(localctx, 52, self.RULE_contentData)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 302 
+            self.state = 304 
             self._errHandler.sync(self)
             _alt = 1
             while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
                 if _alt == 1:
-                    self.state = 302
+                    self.state = 304
                     self._errHandler.sync(self)
                     token = self._input.LA(1)
                     if token in [16]:
-                        self.state = 282
+                        self.state = 284
                         self.match(MimeParser.WSP)
                         pass
                     elif token in [17]:
-                        self.state = 283
+                        self.state = 285
                         self.match(MimeParser.FWS)
                         pass
                     elif token in [22]:
-                        self.state = 284
+                        self.state = 286
                         self.match(MimeParser.WORD)
                         pass
                     elif token in [20]:
-                        self.state = 285
+                        self.state = 287
                         self.match(MimeParser.DIGITS)
                         pass
                     elif token in [23]:
-                        self.state = 286
+                        self.state = 288
                         self.match(MimeParser.SPECIAL_TOKEN)
                         pass
                     elif token in [24]:
-                        self.state = 287
+                        self.state = 289
                         self.match(MimeParser.CONTENT_CHAR)
                         pass
                     elif token in [1]:
-                        self.state = 288
+                        self.state = 290
                         self.match(MimeParser.COLON)
                         pass
                     elif token in [2]:
-                        self.state = 289
+                        self.state = 291
                         self.match(MimeParser.SEMICOLON)
                         pass
                     elif token in [3]:
-                        self.state = 290
+                        self.state = 292
                         self.match(MimeParser.SLASH)
                         pass
                     elif token in [4]:
-                        self.state = 291
+                        self.state = 293
                         self.match(MimeParser.EQUALS)
                         pass
                     elif token in [5]:
-                        self.state = 292
+                        self.state = 294
                         self.match(MimeParser.COMMA)
                         pass
                     elif token in [7]:
-                        self.state = 293
+                        self.state = 295
                         self.match(MimeParser.LPAREN)
                         pass
                     elif token in [8]:
-                        self.state = 294
+                        self.state = 296
                         self.match(MimeParser.RPAREN)
                         pass
                     elif token in [9]:
-                        self.state = 295
+                        self.state = 297
                         self.match(MimeParser.LANGLE)
                         pass
                     elif token in [10]:
-                        self.state = 296
+                        self.state = 298
                         self.match(MimeParser.RANGLE)
                         pass
                     elif token in [6]:
-                        self.state = 297
+                        self.state = 299
                         self.match(MimeParser.PERIOD)
                         pass
                     elif token in [11]:
-                        self.state = 298
+                        self.state = 300
                         self.match(MimeParser.DOUBLE_DASH)
                         pass
                     elif token in [12]:
-                        self.state = 299
+                        self.state = 301
                         self.match(MimeParser.UNDERLINE)
                         pass
                     elif token in [13]:
-                        self.state = 300
+                        self.state = 302
                         self.match(MimeParser.BACKSLASH)
                         pass
                     elif token in [21]:
-                        self.state = 301
+                        self.state = 303
                         self.quotedString()
                         pass
                     else:
@@ -2429,7 +2468,7 @@ class MimeParser ( Parser ):
 
                 else:
                     raise NoViableAltException(self)
-                self.state = 304 
+                self.state = 306 
                 self._errHandler.sync(self)
                 _alt = self._interp.adaptivePredict(self._input,35,self._ctx)
 

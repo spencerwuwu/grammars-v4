@@ -206,6 +206,15 @@ class MimeParserListener(ParseTreeListener):
         pass
 
 
+    # Enter a parse tree produced by MimeParser#boundaryLine.
+    def enterBoundaryLine(self, ctx:MimeParser.BoundaryLineContext):
+        pass
+
+    # Exit a parse tree produced by MimeParser#boundaryLine.
+    def exitBoundaryLine(self, ctx:MimeParser.BoundaryLineContext):
+        pass
+
+
     # Enter a parse tree produced by MimeParser#body.
     def enterBody(self, ctx:MimeParser.BodyContext):
         pass
