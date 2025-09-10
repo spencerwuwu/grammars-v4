@@ -43,11 +43,11 @@ fragment ESC
     : '\\' (["\\/bfnrt] | UNICODE)
     ;
 
-fragment UNICODE
+fragment UNICODE //
     : 'u' HEX HEX HEX HEX
     ;
 
-fragment HEX
+fragment HEX //
     : [0-9a-fA-F]
     ;
 
@@ -55,11 +55,11 @@ fragment SAFECODEPOINT
     : ~ ["\\\u0000-\u001F]
     ;
 
-NUMBER
+NUMBER  //
     : '-'? INT ('.' [0-9]+)? EXP?
     ;
 
-fragment INT
+fragment INT //
     // integer part forbids leading 0s (e.g. `01`)
     : '0'
     | [1-9] [0-9]*
@@ -67,7 +67,7 @@ fragment INT
 
 // no leading zeros
 
-fragment EXP
+fragment EXP //
     // exponent number permits leading 0s (e.g. `1e01`)
     : [Ee] [+-]? [0-9]+
     ;
