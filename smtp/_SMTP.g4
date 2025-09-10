@@ -24,9 +24,9 @@ quit            : 'QUIT' CRLF;
 // === Paths ===
 reversePath     : '<' path? '>';
 forwardPath     : '<' path '>';
-path            : a_d_l? ':'? mailbox;
+path            : adl? ':'? mailbox;
 // optional source route: @domain,@domain,...
-a_d_l           : atDomain (',' atDomain)* ;
+adl           : atDomain (',' atDomain)* ;
 atDomain        : '@' domain ;
 
 mailbox         : localPart '@' domain;
