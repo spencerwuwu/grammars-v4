@@ -1,0 +1,6 @@
+{"users": [
+    {"name": "John", "scores": [85, 92]},
+    null, 
+    {},
+    true
+]}

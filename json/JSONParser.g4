@@ -9,7 +9,7 @@ json
     ;
 
 obj
-    : LBRACE pair (COMMA pair)* RBRACE
+    : LBRACE pair (COMMA (obj | pair))* RBRACE
     | LBRACE RBRACE
     ;
 
